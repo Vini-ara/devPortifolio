@@ -12,7 +12,7 @@ export const HeaderWrapper = styled.header`
   color: ${props => props.theme.text};
 
   h1 {
-    font-size: 3rem;
+    font-size: 2.25rem;
   }
 
   nav {

@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 type themeProps = {
   theme: {
     main_bg: string;
+    text: string;
   }
 }
 
@@ -16,5 +17,6 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     background-color: ${(props: themeProps) => props.theme.main_bg};
+    color: ${(props: themeProps) => props.theme.text};
   }
 `

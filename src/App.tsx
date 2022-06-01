@@ -1,6 +1,7 @@
 import { GlobalStyles } from './styles/global_styles';
-import { Header } from './components/header'
-import { Themes } from './styles/themes'
+import { Header } from './components/header';
+import { About } from './components/sections/about';
+import { Themes } from './styles/themes';
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
     <Themes>
       <GlobalStyles />
       <Header/>
+      <About/>
     </Themes>
   )
 }

@@ -5,7 +5,7 @@ export const Header: React.FC = () => {
   return (
     <HeaderWrapper>
         <h1>
-          Va
+          vini.araujo()
         </h1>
         <nav>
           <a> About </a>
