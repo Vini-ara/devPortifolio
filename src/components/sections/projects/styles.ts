@@ -12,11 +12,16 @@ export const Wrapper = styled.section`
   }
 `
 
+export const Content = styled.div`
+  display: flex;
+  width: 100%;
+
+  padding-top: 10vh;
+`
+
 export const WindowCard = styled.div`
   height: 27.5rem; 
   width: 50%;
-
-  margin-top: 8rem; 
 
   border: 8px ${props => props.theme.main_bg} solid;
   border-radius: 1.5rem; 
@@ -78,4 +83,41 @@ export const WindowCardHeader = styled.div`
   }
 
   border-bottom: 5px ${props => props.theme.main_bg} solid;
+`
+
+export const Info = styled.div`
+  margin-left: 3.5rem;
+  padding-right: 2rem; 
+  flex: 1; 
+
+  h3 {
+    font-size: 3.25rem;
+  }
+
+  p {
+    font-size: 1.5rem; 
+    margin-top: 1.5rem; 
+  }
+`
+
+export const Links = styled.div`
+  margin-top: 1rem; 
+  button {
+    color: ${props => props.theme.main_bg}; 
+    outline: none; 
+    border: none; 
+    font-size: 1.25rem; 
+    padding: .25rem 1rem;
+    background: ${props => props.theme.main_bg2};
+    border: 3px solid ${props => props.theme.main_bg};
+
+    & + button {
+      margin-left: 1rem; 
+    }
+
+    &:hover {
+      color: ${props => props.theme.text};
+      background: ${props => props.theme.main_bg};
+    }
+  }
 `
