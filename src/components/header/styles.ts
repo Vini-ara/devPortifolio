@@ -9,6 +9,10 @@ export const HeaderWrapper = styled.header`
   height: 5rem;
   background: ${props => props.theme.bg};
 
+  position: sticky; 
+  top: 0; 
+  z-index: 1; 
+
   color: ${props => props.theme.text};
 
   h1 {

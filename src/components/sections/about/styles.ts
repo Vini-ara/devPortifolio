@@ -50,10 +50,9 @@ const scrollAnimation = keyframes`
 export const Wrapper = styled.section`
   position: relative;
   display: flex;
-  /* align-items: center;  */
   width: 100%;
   height: calc(100vh - 5rem);
-  padding: 8rem 10rem; 
+  padding: 8rem 10rem;
 
   img {
     width 50%; 
@@ -64,7 +63,6 @@ export const Wrapper = styled.section`
 export const Content = styled.div`
     width: 50%; 
     align-self: flex-start;
-
     animation: ${dropDownAnimation} 2s ease;
 
     h2 {
