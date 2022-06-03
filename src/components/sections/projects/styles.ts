@@ -1,4 +1,13 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const rollCardIn = keyframes`
+  0% {
+    transform: rotateX(90deg) translateY(-10rem) rotateY(-90deg); 
+  }
+  100% {
+    transform: rotateX(0deg) translateY(0) rotateY(0);
+  }
+`
 
 export const Wrapper = styled.section`
   height: calc(100vh - 5rem); 
@@ -6,6 +15,7 @@ export const Wrapper = styled.section`
   
   background: ${props => props.theme.main_bg2};
   color: ${props => props.theme.main_bg};
+  perspective: 10000px; 
 
   h2 {
     font-size: 3rem; 
@@ -16,7 +26,9 @@ export const Content = styled.div`
   display: flex;
   width: 100%;
 
-  padding-top: 10vh;
+  animation: ${rollCardIn} 2s ease;
+
+  padding-top: 20vh;
 `
 
 export const WindowCard = styled.div`
@@ -102,8 +114,7 @@ export const Info = styled.div`
 
 export const Links = styled.div`
   margin-top: 1rem; 
-  button {
-    color: ${props => props.theme.main_bg}; 
+  a {
     outline: none; 
     border: none; 
     font-size: 1.25rem; 
@@ -111,12 +122,19 @@ export const Links = styled.div`
     background: ${props => props.theme.main_bg2};
     border: 3px solid ${props => props.theme.main_bg};
 
-    & + button {
+    transition: all .3s; 
+
+    color: ${props => props.theme.main_bg}; 
+    text-decoration: none; 
+    width: 100%;
+    heigth: 100%; 
+
+    & + a {
       margin-left: 1rem; 
     }
 
     &:hover {
-      color: ${props => props.theme.text};
+      color: ${props => props.theme.text}; 
       background: ${props => props.theme.main_bg};
     }
   }
