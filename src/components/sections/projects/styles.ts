@@ -1,4 +1,8 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes, StyledComponent } from 'styled-components';
+
+interface ContentProps  {
+  isEven?: boolean;
+}
 
 const rollCardIn = keyframes`
   0% {
@@ -10,7 +14,7 @@ const rollCardIn = keyframes`
 `
 
 export const Wrapper = styled.section`
-  height: calc(100vh - 5rem); 
+  /* height: calc(100vh - 5rem);  */
   padding: 3rem 10rem; 
   
   background: ${props => props.theme.main_bg2};
@@ -22,11 +26,12 @@ export const Wrapper = styled.section`
   }
 `
 
-export const Content = styled.div`
+export const Content = styled.div<ContentProps>`
   display: flex;
   width: 100%;
-
-  animation: ${rollCardIn} 2s ease;
+  opacity: 0; 
+  transform: rotateX(30deg) translateX(${props => props.isEven ? '5rem' : '-5rem'}); 
+  /* animation: ${rollCardIn} 2s ease; */
 
   padding-top: 20vh;
 `
@@ -52,6 +57,7 @@ export const WindowCard = styled.div`
 export const WindowCardHeader = styled.div`
   height: 2.25rem; 
   width: 100%;
+  z-index: -1;
   
   position: sticky; 
   top: 0; 
