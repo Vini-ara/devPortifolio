@@ -106,4 +106,3 @@ export const ScrollDownAnimation = styled.div`
     }
   } 
 `
-

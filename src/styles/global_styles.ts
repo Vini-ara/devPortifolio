@@ -19,4 +19,8 @@ export const GlobalStyles = createGlobalStyle`
     background-color: ${(props: themeProps) => props.theme.main_bg};
     color: ${(props: themeProps) => props.theme.text};
   }
+
+  button {
+    cursor: pointer;
+  }
 `
