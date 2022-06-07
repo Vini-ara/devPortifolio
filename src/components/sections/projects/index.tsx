@@ -14,50 +14,34 @@ export const Projects: React.FC = () => {
   const project2 = useRef<HTMLDivElement>(null);
   const project3 = useRef<HTMLDivElement>(null);
   const project4 = useRef<HTMLDivElement>(null);
+
                                                                                                                                                     
   gsap.registerPlugin(ScrollTrigger)
 
   useEffect(() => {
-    let anm = gsap.to(project1.current, {
-      opacity: 1,
-      rotateX: "0deg",
-      translateX: '0'
-    })
-    let anm2 = gsap.to(project2.current, {
-      opacity: 1,
-      rotateX: "0deg",
-      translateX: '0'
-    })
-    let anm3 = gsap.to(project3.current, {
-      opacity: 1,
-      rotateX: "0deg",
-      translateX: '0',
-    })
-    let anm4 = gsap.to(project4.current, {
-      opacity: 1,
-      rotateX: "0deg",
-      translateX: '0'
-    })
-
-    ScrollTrigger.create({
-      trigger: project1.current,
-      start: "top center",
-      animation: anm
-    })
-    ScrollTrigger.create({
-      trigger: project2.current,
-      start: "top center",
-      animation: anm2
-    })
-    ScrollTrigger.create({
-      trigger: project3.current,
-      start: "top center",
-      animation: anm3
-    })
-    ScrollTrigger.create({
-      trigger: project4.current,
-      start: "top center",
-      animation: anm4
+    const projects = [
+      project1.current,
+      project2.current,
+      project3.current,
+      project4.current
+    ]
+      
+    projects.forEach(project => {
+      gsap.fromTo(project,{
+        opacity: 0,
+        rotateX: '90deg',
+        translateX: '0'
+      },{
+        opacity: 1,
+        rotateX: '0deg',
+        translateX: '0',
+        scrollTrigger: {
+          trigger: project,
+          start: "top bottom",
+          end: "center center",
+          scrub: true,
+        } 
+      })
     })
   }, []);
 

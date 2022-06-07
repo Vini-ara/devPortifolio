@@ -33,7 +33,7 @@ export const Content = styled.div<ContentProps>`
   transform: rotateX(30deg) translateX(${props => props.isEven ? '5rem' : '-5rem'}); 
   /* animation: ${rollCardIn} 2s ease; */
 
-  padding-top: 20vh;
+  padding-top: 5rem;
 `
 
 export const WindowCard = styled.div`
@@ -45,8 +45,9 @@ export const WindowCard = styled.div`
 
   overflow-y: scroll;
   img {
+    min-height: 100%;
     width: 100%; 
-
+    object-fit: cover;
   }
 
   &::-webkit-scrollbar {
