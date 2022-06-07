@@ -1,7 +1,7 @@
 import React from "react";
 import { Wrapper, ScrollDownAnimation, Content } from './styles';
 
-import webDevPNG from '../../../assets/web-development.png';
+import webDevPNG from '../../../assets/wavingLilDude.png';
 
 export const About: React.FC = () => {
   return (

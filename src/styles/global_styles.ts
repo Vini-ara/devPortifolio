@@ -15,6 +15,10 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'VT323', monospace;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     background-color: ${(props: themeProps) => props.theme.main_bg};
     color: ${(props: themeProps) => props.theme.text};

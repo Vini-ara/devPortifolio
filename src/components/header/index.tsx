@@ -9,8 +9,8 @@ export const Header: React.FC = () => {
         </h1>
         <nav>
           <a> About </a>
-          <a> Projects </a>
-          <a> Contact </a>
+          <a href="#projects"> Projects </a>
+          <a href="#contact"> Contact </a>
         </nav>
     </HeaderWrapper>
   )

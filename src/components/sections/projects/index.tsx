@@ -46,7 +46,7 @@ export const Projects: React.FC = () => {
   }, []);
 
   return (
-    <Wrapper>
+    <Wrapper id="projects">
       <h2>Projects...</h2>
 
       <Content ref={project1}>

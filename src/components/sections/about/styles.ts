@@ -56,7 +56,7 @@ export const Wrapper = styled.section`
 
   img {
     width 50%; 
-    height: 90%; 
+    height: 100%; 
     animation: ${popUpAnimation} 2s ease ,${floatingAnimation} 7s 2s ease-in-out infinite;
   }
 `

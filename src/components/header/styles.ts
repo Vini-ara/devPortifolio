@@ -22,6 +22,8 @@ export const HeaderWrapper = styled.header`
       font-size: 1.5rem;  
       margin-left: 1rem;    
       cursor: pointer;
+      text-decoration: none;
+      color: ${props => props.theme.text};
 
       &:hover {
         color: ${props => props.theme.high_text} 
