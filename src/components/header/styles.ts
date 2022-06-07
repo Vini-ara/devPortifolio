@@ -9,6 +9,8 @@ export const HeaderWrapper = styled.header`
   height: 5rem;
   background: ${props => props.theme.bg};
 
+  // position: ${props => props.isVisible ? 'sticky' : 'static'};
+
   z-index: 1; 
 
   color: ${props => props.theme.text};

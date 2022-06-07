@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { HeaderWrapper } from './styles';
 
 export const Header: React.FC = () => {
+  const isVisible = useState(true);
+
   return (
-    <HeaderWrapper>
+    <HeaderWrapper isVisible={isVisible}>
         <h1>
           vini.araujo()
         </h1>
