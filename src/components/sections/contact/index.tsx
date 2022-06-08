@@ -12,8 +12,8 @@ export const Contact: React.FC = () => {
       <p> You can contact me through all the plataforms listed bellow:</p>
       <div> 
         <span>
-          <a href=""><BsLinkedin color="white" size="2rem"/></a>
-          - Linkdin
+          <a href="https://www.linkedin.com/in/vin%C3%ADcius-araujo-342b1823b/"><BsLinkedin color="white" size="2rem"/></a>
+          - Linkedin
         </span>
         <span> 
           <a href="https://www.github.com/Vini-ara" target="blank"><BsGithub color="white" size="2rem"/></a>
