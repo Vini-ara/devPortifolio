@@ -5,7 +5,7 @@ import webDevPNG from '../../../assets/wavingLilDude.png';
 
 export const About: React.FC = () => {
   return (
-    <Wrapper>
+    <Wrapper id="about">
       <Content>
         <h2>Hello There <span>&#128075;</span></h2> 
         
