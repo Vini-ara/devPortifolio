@@ -51,7 +51,7 @@ export const Wrapper = styled.section`
   position: relative;
   display: flex;
   width: 100%;
-  height: calc(100vh - 5rem);
+  height: 100vh;
   padding: 8rem 10rem;
 
   img {

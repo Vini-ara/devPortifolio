@@ -9,7 +9,7 @@ export const HeaderWrapper = styled.header`
   height: 5rem;
   background: ${props => props.theme.bg};
 
-  position: sticky;
+  position: fixed;
   top: 0; 
   max-height: ${props => props.isVisible ? '5rem' : '0'};
   overflow: hidden;

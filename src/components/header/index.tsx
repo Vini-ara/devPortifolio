@@ -1,46 +1,23 @@
 import React, { useState, useEffect, useRef } from "react";
 import { HeaderWrapper } from './styles';
+import { useScrollDirection } from '../../hooks/useScrollDirection'
 
 export const Header: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
 
-  const toggleIsVisible = () => {
-    setIsVisible(!isVisible);
+  function handleScroll({prev, curr}) {
+    if(prev > curr || curr < 80) {
+      setIsVisible(true)
+      return
+    }
+
+    if(prev < curr && curr > 80) {
+      setIsVisible(false)
+      return
+    }
   }
-  const position = useRef(window.scrollY);
 
-  useEffect(() => {
-    let timeout = null;
-
-    function getScroll() {
-      return window.scrollY 
-    }
-
-    function callback() {
-      let currentPosition = getScroll();
-      if(currentPosition < position.current || currentPosition <= 100) {
-        console.log(currentPosition)
-        setIsVisible(true);
-      } else {
-        setIsVisible(false)
-      }
-      position.current = currentPosition;
-      timeout = null;
-    }
-
-    function handleScroll() {
-      if(timeout === null) {
-        timeout = setTimeout(callback, 200)
-        return
-      }
-    }
-
-    window.addEventListener('scroll', handleScroll)
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, []);
+  useScrollDirection(handleScroll);
 
   return (
     <HeaderWrapper isVisible={isVisible}>
