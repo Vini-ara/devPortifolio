@@ -54,6 +54,9 @@ export const Wrapper = styled.section`
   height: 100vh;
   padding: calc(5rem + 7rem) 10rem 0;
 
+  @media (max-width: 1400px) {
+    padding: calc(5rem + 4rem) 10rem 0;
+  }
 
   @media (max-width: 1024px) {
     padding: calc(5rem + 4rem) 5rem 0; 
@@ -102,8 +105,6 @@ export const ImgContainer = styled.div`
     aspect-ratio: 1/1;
     animation: ${popUpAnimation} 2s ease ,${floatingAnimation} 7s 2s ease-in-out infinite;
   }
-  
-
 `
 
 export const ScrollDownAnimation = styled.div`

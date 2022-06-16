@@ -1,4 +1,11 @@
-import { Wrapper, WindowCard, WindowCardHeader, Info, Content, Links } from './styles';
+import { 
+  Wrapper, 
+  WindowCard, 
+  WindowCardHeader, 
+  WindowImgContainer, 
+  Info, 
+  Content, 
+  Links } from './styles';
 
 import pokedexImg from '../../../assets/listScreenshot.jpg';
 import matosecoImg from '../../../assets/mato-seco.jpg';
@@ -60,7 +67,9 @@ export const Projects: React.FC = () => {
             <p>~/Pokedexer</p>  
           </WindowCardHeader>
 
-          <img src={pokedexImg} alt='pokedexer list page' />
+          <WindowImgContainer>
+            <img src={pokedexImg} alt='pokedexer list page' />
+          </WindowImgContainer>
         </WindowCard>
 
         <Info>
@@ -96,9 +105,11 @@ export const Projects: React.FC = () => {
             </div>
             <p>~/EscreverEsquecer</p>  
           </WindowCardHeader>
-          <img src={escreveresquecerImg} alt='escrever esquecer' />
-        </WindowCard>
 
+          <WindowImgContainer style={{overflow: 'hidden'}}>
+            <img src={escreveresquecerImg} alt='escrever esquecer' />
+          </WindowImgContainer>
+        </WindowCard>
       </Content>
 
       <Content ref={project3}>
@@ -112,9 +123,10 @@ export const Projects: React.FC = () => {
             <p>~/IpTracker</p>  
           </WindowCardHeader>
 
-          <img src={iptrackerImg} alt='pokedexer list page' />
+          <WindowImgContainer style={{overflow: 'hidden'}}>
+            <img src={iptrackerImg} alt='pokedexer list page' />
+          </WindowImgContainer>
         </WindowCard>
-
         <Info>
           <h3> Ip Tracker </h3>
 
@@ -148,7 +160,10 @@ export const Projects: React.FC = () => {
             </div>
             <p>~/EscreverEsquecer</p>  
           </WindowCardHeader>
-          <img src={matosecoImg} alt='escrever esquecer' />
+
+          <WindowImgContainer>
+            <img src={matosecoImg} alt='escrever esquecer' />
+          </WindowImgContainer>
         </WindowCard>
       </Content>
     </Wrapper>

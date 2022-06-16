@@ -4,17 +4,7 @@ interface ContentProps  {
   isEven?: boolean;
 }
 
-const rollCardIn = keyframes`
-  0% {
-    transform: rotateX(90deg) translateY(-10rem) rotateY(-90deg); 
-  }
-  100% {
-    transform: rotateX(0deg) translateY(0) rotateY(0);
-  }
-`
-
 export const Wrapper = styled.section`
-  /* height: calc(100vh - 5rem);  */
   padding: 3rem 10rem; 
   
   background: ${props => props.theme.main_bg2};
@@ -31,36 +21,32 @@ export const Content = styled.div<ContentProps>`
   width: 100%;
   opacity: 0; 
   transform: rotateX(30deg) translateX(${props => props.isEven ? '5rem' : '-5rem'}); 
-  /* animation: ${rollCardIn} 2s ease; */
 
   padding-top: 5rem;
 `
 
 export const WindowCard = styled.div`
-  height: 27.5rem; 
+  position: relative;
   width: 50%;
 
   border: 8px ${props => props.theme.main_bg} solid;
   border-radius: 1.5rem; 
 
   overflow-y: scroll;
-  img {
-    min-height: 100%;
-    width: 100%; 
-    object-fit: cover;
-  }
 
   &::-webkit-scrollbar {
-    width: 0px; 
+   width: 0px; 
   }
 `
 
 export const WindowCardHeader = styled.div`
   height: 2.25rem; 
   width: 100%;
-  z-index: -1;
+  z-index: 2;
+
+  border-radius: 1.5rem 1.5rem 0 0;
   
-  position: sticky; 
+  position: absolute; 
   top: 0; 
   
   display: flex; 
@@ -102,6 +88,19 @@ export const WindowCardHeader = styled.div`
   }
 
   border-bottom: 5px ${props => props.theme.main_bg} solid;
+`
+
+export const WindowImgContainer = styled.div`
+  width: 100%;
+  margin-top: 2.25rem; 
+  aspect-ratio: 16/9;
+  overflow-y: scroll;
+
+  img {
+    min-height: 100%;
+    width: 100%; 
+    object-fit: cover;
+  }
 `
 
 export const Info = styled.div`
