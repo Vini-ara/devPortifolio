@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
-export const HeaderWrapper = styled.header`
+interface HeaderWrapperProps {
+  isVisible: boolean;
+}
+
+export const HeaderWrapper = styled.header<HeaderWrapperProps>`
   width: 100%;
   padding: 0 10rem;  
   display: flex; 
@@ -36,5 +40,9 @@ export const HeaderWrapper = styled.header`
         color: ${props => props.theme.high_text} 
       }
     }
+  }
+
+  @media (max-width: 1024px) {
+    padding: 0 5rem; 
   }
 `

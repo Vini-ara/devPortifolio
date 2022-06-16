@@ -52,13 +52,18 @@ export const Wrapper = styled.section`
   display: flex;
   width: 100%;
   height: 100vh;
-  padding: 8rem 10rem;
+  padding: calc(5rem + 7rem) 10rem 0;
 
-  img {
-    width 50%; 
-    height: 100%; 
-    animation: ${popUpAnimation} 2s ease ,${floatingAnimation} 7s 2s ease-in-out infinite;
+
+  @media (max-width: 1024px) {
+    padding: calc(5rem + 4rem) 5rem 0; 
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center; 
+  }
+  
 `
 export const Content = styled.div`
     width: 50%; 
@@ -77,6 +82,28 @@ export const Content = styled.div`
         margin-top: 1rem; 
       }
     }
+
+  @media (max-width: 768px) {
+    width: 100%; 
+  }
+`
+
+export const ImgContainer = styled.div`
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+
+  img {
+    width: 100%;
+    height: auto; 
+    margin: auto 0; 
+    aspect-ratio: 1/1;
+    animation: ${popUpAnimation} 2s ease ,${floatingAnimation} 7s 2s ease-in-out infinite;
+  }
+  
+
 `
 
 export const ScrollDownAnimation = styled.div`

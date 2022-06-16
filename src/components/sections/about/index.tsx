@@ -1,5 +1,5 @@
 import React from "react";
-import { Wrapper, ScrollDownAnimation, Content } from './styles';
+import { Wrapper, ScrollDownAnimation, Content, ImgContainer } from './styles';
 
 import webDevPNG from '../../../assets/wavingLilDude.png';
 
@@ -10,17 +10,17 @@ export const About: React.FC = () => {
         <h2>Hello There <span>&#128075;</span></h2> 
         
         <p>
-          Some text that I am still to write Some text that I am still to writeSome text that I am still to writeSome text that I am still to writeSome text that I am still to writeSome text that I am still to writeSome text that I am still to write
+          I'm Vinicius Araujo, a software Developer and a computer sciece student at University of Brasília.
         </p>
+          
         <p>
-          Some text that I am still to write Some text that I am still to writeSome text that I am still to writeSome text that I am still to writeSome text that I am still to writeSome text that I am still to writeSome text that I am still to write
-        </p>
-        <p>
-          Some text that I am still to write Some text that I am still to writeSome text that I am still to writeSome text that I am still to writeSome text that I am still to writeSome text that I am still to writeSome text that I am still to write
+          I love problem solving and creating inovative solutions, and I made this webSite to showcase some of my work. 
         </p>
       </Content> 
 
-      <img src={webDevPNG} alt="web dev illustration" />
+      <ImgContainer>
+        <img src={webDevPNG} alt="web dev illustration" />
+      </ImgContainer>
 
       <ScrollDownAnimation> 
         <div className="mouse">
@@ -28,7 +28,6 @@ export const About: React.FC = () => {
           </div> 
         </div> 
       </ScrollDownAnimation>
-
     </Wrapper>
   )
 }
