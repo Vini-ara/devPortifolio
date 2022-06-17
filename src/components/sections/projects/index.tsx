@@ -78,21 +78,29 @@ export const Projects: React.FC = () => {
           <p>Check the info about any pokemon you want, with all the details necessary, evolution chains, base stats, type weaknesses and more.</p>
 
           <Links> 
-            <a href="https://github.com/Vini-ara/Pokedex" target="blank">Code</a>
-            <a href="https://pokedexer.netlify.app" target="blank">Site</a>
+            <button>
+              <a href="https://github.com/Vini-ara/Pokedex" target="blank">Code</a>
+            </button>
+            <button>
+              <a href="https://pokedexer.netlify.app" target="blank">Site</a>
+            </button>
           </Links>
         </Info>
       </Content>
 
-      <Content ref={project2} isEven>
-        <Info>
+      <Content ref={project2}>
+        <Info isEven>
           <h3> Escrever Esquecer </h3>
 
           <p>Writter portifolio of the writter Victor Ribeiro-Santos, where you can find some of his creations and his art expression.</p>
 
           <Links> 
-            <a href="https://github.com/Vini-ara/Escrever-Esquecer" target="blank">Code</a>
-            <a href="https://escreveresquecer.com.br/" target="blank">Site</a>
+            <button>
+              <a href="https://github.com/Vini-ara/Escrever-Esquecer" target="blank">Code</a>
+            </button>
+            <button>
+              <a href="https://escreveresquecer.com.br/" target="blank">Site</a>
+            </button>
           </Links>
         </Info>
 
@@ -133,21 +141,29 @@ export const Projects: React.FC = () => {
           <p>A place to check the ip address of any web domain you want and also see the map location related to that. </p>
 
           <Links> 
-            <a href="https://github.com/Vini-ara/Ip-tracker" target="blank">Code</a>
-            <a href="https://femiptracker.netlify.app" target="blank">Site</a>
+            <button>
+              <a href="https://github.com/Vini-ara/Ip-tracker" target="blank">Code</a>
+            </button>
+            <button>
+              <a href="https://femiptracker.netlify.app" target="blank">Site</a>
+            </button>
           </Links>
         </Info>
       </Content>
 
-      <Content ref={project4} isEven>
-        <Info>
+      <Content ref={project4}>
+        <Info isEven>
           <h3> Mato Seco </h3>
 
           <p>My own personal photografy portifolio, to save and showcase some of the bird pictures I take.</p>
 
           <Links> 
-            <a href="https://github.com/Vini-ara/Mato-seco-" target="blank">Code</a>
-            <a href="https://matoseco.netlify.app" target="blank">Site</a>
+            <button>
+              <a href="https://github.com/Vini-ara/Mato-seco-" target="blank">Code</a>
+            </button>
+            <button>
+              <a href="https://matoseco.netlify.app" target="blank">Site</a>
+            </button>
           </Links>
         </Info>
 

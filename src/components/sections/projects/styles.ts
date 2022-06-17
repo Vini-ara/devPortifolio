@@ -1,6 +1,6 @@
 import styled, { keyframes, StyledComponent } from 'styled-components';
 
-interface ContentProps  {
+interface InfoProps {
   isEven?: boolean;
 }
 
@@ -14,15 +14,21 @@ export const Wrapper = styled.section`
   h2 {
     font-size: 3rem; 
   }
+
+  @media (max-width: 1024px) {
+    padding: 3rem 5rem; 
+  }
 `
 
-export const Content = styled.div<ContentProps>`
+export const Content = styled.div`
   display: flex;
   width: 100%;
-  opacity: 0; 
-  transform: rotateX(30deg) translateX(${props => props.isEven ? '5rem' : '-5rem'}); 
 
   padding-top: 5rem;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
 `
 
 export const WindowCard = styled.div`
@@ -31,12 +37,15 @@ export const WindowCard = styled.div`
 
   border: 8px ${props => props.theme.main_bg} solid;
   border-radius: 1.5rem; 
+  overflow-y: hidden;
 
-  overflow-y: scroll;
+  margin: 0 auto;
 
-  &::-webkit-scrollbar {
-   width: 0px; 
+  @media (max-width: 1000px) {
+    width: 80%;
+    margin-top: 2rem; 
   }
+
 `
 
 export const WindowCardHeader = styled.div`
@@ -96,6 +105,10 @@ export const WindowImgContainer = styled.div`
   aspect-ratio: 16/9;
   overflow-y: scroll;
 
+  &::-webkit-scrollbar {
+   width: 0px; 
+  }
+
   img {
     min-height: 100%;
     width: 100%; 
@@ -103,9 +116,9 @@ export const WindowImgContainer = styled.div`
   }
 `
 
-export const Info = styled.div`
-  margin-left: 3.5rem;
-  padding-right: 2rem; 
+export const Info = styled.div<InfoProps>`
+  margin-left: ${props => props.isEven ? '0' : '3.25rem'};
+  margin-right: ${props => props.isEven ? '3.25rem' : '0'};
   flex: 1; 
 
   h3 {
@@ -120,28 +133,41 @@ export const Info = styled.div`
 
 export const Links = styled.div`
   margin-top: 1rem; 
-  a {
+
+  button {
+    width: fit-content; 
+    height: fit-content;
+    padding: .25rem 1rem;
     outline: none; 
     border: none; 
-    font-size: 1.25rem; 
-    padding: .25rem 1rem;
+
     background: ${props => props.theme.main_bg2};
+
     border: 3px solid ${props => props.theme.main_bg};
 
     transition: all .3s; 
 
+
+    &:hover {
+      background: ${props => props.theme.main_bg};
+
+      a {
+        color: ${props => props.theme.text}; 
+      }
+    }
+    
+    & + button {
+      margin-left: 1rem; 
+    }
+  }
+
+  a {
     color: ${props => props.theme.main_bg}; 
+    
+    font-size: 1.25rem; 
     text-decoration: none; 
     width: 100%;
     heigth: 100%; 
 
-    & + a {
-      margin-left: 1rem; 
-    }
-
-    &:hover {
-      color: ${props => props.theme.text}; 
-      background: ${props => props.theme.main_bg};
-    }
   }
 `

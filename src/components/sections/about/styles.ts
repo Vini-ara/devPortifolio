@@ -67,6 +67,9 @@ export const Wrapper = styled.section`
     align-items: center; 
   }
   
+  @media (max-width: 500px) {
+    padding: calc(5rem + 3rem) 2.5rem 0;
+  }
 `
 export const Content = styled.div`
     width: 50%; 
@@ -88,6 +91,16 @@ export const Content = styled.div`
 
   @media (max-width: 768px) {
     width: 100%; 
+  }
+
+  @media (max-width: 500px) {
+    h2 {
+      font-size: 2.5rem;       
+    }
+
+    p {
+      font-size: 1.25rem; 
+    }
   }
 `
 

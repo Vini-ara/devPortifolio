@@ -22,6 +22,7 @@ export const GlobalStyles = createGlobalStyle`
   body {
     background-color: ${(props: themeProps) => props.theme.main_bg};
     color: ${(props: themeProps) => props.theme.text};
+    overflow-x: hidden; 
   }
 
   button {
