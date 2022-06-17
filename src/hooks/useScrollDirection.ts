@@ -1,14 +1,23 @@
 import { useRef, useLayoutEffect } from 'react';
 
+interface EffectProps {
+  prev: number;
+  curr: number;
+}
+
+interface UseScrollDirectionProps {
+  effect: (positions: EffectProps) => void;
+}
+
 function getScrollPosY() {
   return window.scrollY
 }
 
-export function useScrollDirection(effect) {
-  let timeout = null;
+export function useScrollDirection({ effect }: UseScrollDirectionProps) {
+  let timeout: ReturnType<typeof setTimeout> | null = null;
   const position = useRef(getScrollPosY());  
 
-  function resetValues(currentPosition) {
+  function resetValues(currentPosition: number) {
     position.current = currentPosition;
     timeout = null;
   }
