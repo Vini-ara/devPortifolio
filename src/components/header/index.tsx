@@ -6,6 +6,7 @@ import { useScrollDirection } from '../../hooks/useScrollDirection'
 import { HeaderWrapper, HeaderModal } from './styles';
 import { BsList, BsX } from 'react-icons/bs';
 
+
 interface handleScrollProps {
   prev: number;
   curr: number;
@@ -27,7 +28,7 @@ export const Header: React.FC = () => {
     }
   }
 
-  useScrollDirection(handleScroll);
+  useScrollDirection({ effect: handleScroll });
 
   return (
     <HeaderWrapper isVisible={isVisible}>

@@ -5,7 +5,7 @@ interface EffectProps {
   curr: number;
 }
 
-interface UseScrollDirectionProps {
+export interface UseScrollDirectionProps {
   effect: (positions: EffectProps) => void;
 }
 
