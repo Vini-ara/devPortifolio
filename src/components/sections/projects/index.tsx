@@ -132,9 +132,10 @@ export const Projects: React.FC = () => {
           </WindowCardHeader>
 
           <WindowImgContainer style={{overflow: 'hidden'}}>
-            <img src={iptrackerImg} alt='pokedexer list page' />
+            <img src={iptrackerImg} alt='ip-tracker home page' />
           </WindowImgContainer>
         </WindowCard>
+
         <Info>
           <h3> Ip Tracker </h3>
 
@@ -178,7 +179,7 @@ export const Projects: React.FC = () => {
           </WindowCardHeader>
 
           <WindowImgContainer>
-            <img src={matosecoImg} alt='escrever esquecer' />
+            <img src={matosecoImg} alt='mato seco website' />
           </WindowImgContainer>
         </WindowCard>
       </Content>

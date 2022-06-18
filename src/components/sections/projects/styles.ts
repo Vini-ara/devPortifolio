@@ -157,6 +157,11 @@ export const WindowImgContainer = styled.div`
     object-fit: cover;
   }
 
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+
   @media (max-width: 500px) {
     margin-top: 1.75rem;
   }
