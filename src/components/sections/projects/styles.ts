@@ -106,7 +106,13 @@ export const WindowImgContainer = styled.div`
   overflow-y: scroll;
 
   &::-webkit-scrollbar {
-   width: 0px; 
+   width: 5px; 
+    background-color: ${props => props.theme.main_bg};
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background-color: ${props => props.theme.high_text};
   }
 
   img {
