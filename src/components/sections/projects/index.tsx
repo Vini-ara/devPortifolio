@@ -54,7 +54,7 @@ export const Projects: React.FC = () => {
 
   return (
     <Wrapper id="projects">
-      <h2>Projects...</h2>
+      <h2>...Projects</h2>
 
       <Content ref={project1}>
         <WindowCard>
@@ -88,7 +88,7 @@ export const Projects: React.FC = () => {
         </Info>
       </Content>
 
-      <Content ref={project2}>
+      <Content ref={project2} isEven>
         <Info isEven>
           <h3> Escrever Esquecer </h3>
 
@@ -151,7 +151,7 @@ export const Projects: React.FC = () => {
         </Info>
       </Content>
 
-      <Content ref={project4}>
+      <Content ref={project4} isEven>
         <Info isEven>
           <h3> Mato Seco </h3>
 

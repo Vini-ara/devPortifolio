@@ -1,7 +1,11 @@
-import styled, { keyframes, StyledComponent } from 'styled-components';
+import styled from 'styled-components';
 
 interface InfoProps {
   isEven?: boolean;
+}
+
+interface ContentProps {
+  isEven?: boolean; 
 }
 
 export const Wrapper = styled.section`
@@ -18,16 +22,25 @@ export const Wrapper = styled.section`
   @media (max-width: 1024px) {
     padding: 3rem 5rem; 
   }
+
+  @media (max-width: 500px) {
+    padding: 2.5rem;
+
+    h2 {
+      font-size: 2.5rem;
+    }
+  }
 `
 
-export const Content = styled.div`
+export const Content = styled.div<ContentProps>`
   display: flex;
   width: 100%;
 
-  padding-top: 5rem;
+  margin-top: 7rem;
 
   @media (max-width: 1000px) {
-    flex-direction: column;
+    flex-direction: ${props => props.isEven ? 'column-reverse' : 'column'};
+    gap: 1.5rem;
   }
 `
 
@@ -43,9 +56,15 @@ export const WindowCard = styled.div`
 
   @media (max-width: 1000px) {
     width: 80%;
-    margin-top: 2rem; 
   }
 
+  @media (max-width: 650px) {
+    width: 100%;
+  }
+
+  @media (max-width: 500px) {
+    border: 6px ${props => props.theme.main_bg} solid;
+  }
 `
 
 export const WindowCardHeader = styled.div`
@@ -62,6 +81,8 @@ export const WindowCardHeader = styled.div`
   align-items: center;
   justify-content: center;
   background: ${props => props.theme.main_bg2};
+
+  border-bottom: 5px ${props => props.theme.main_bg} solid;
 
   p {
     font-size: 1.25rem; 
@@ -91,12 +112,27 @@ export const WindowCardHeader = styled.div`
 
       &.green {
         background: #29C841; 
-        cursor: pointer; 
       }
     }
   }
 
-  border-bottom: 5px ${props => props.theme.main_bg} solid;
+  @media (max-width: 500px) {
+    height: 1.75rem; 
+    border-bottom: 3px ${props => props.theme.main_bg} solid;
+
+    p {
+      font-size: 1.15rem;
+    }
+
+    .windowController {
+        margin-left: .25rem;
+        div {
+          height: .5rem;
+          width: .5rem;
+          margin-left: .25rem;
+        }
+    }
+  }
 `
 
 export const WindowImgContainer = styled.div`
@@ -120,6 +156,10 @@ export const WindowImgContainer = styled.div`
     width: 100%; 
     object-fit: cover;
   }
+
+  @media (max-width: 500px) {
+    margin-top: 1.75rem;
+  }
 `
 
 export const Info = styled.div<InfoProps>`
@@ -135,6 +175,20 @@ export const Info = styled.div<InfoProps>`
     font-size: 1.5rem; 
     margin-top: 1.5rem; 
   }
+
+  @media (max-width: 1000px) {
+    margin: 0; 
+  }
+
+  @media (max-width: 500px) {
+    h3 {
+      font-size: 2.5rem;
+    }
+
+    p {
+      font-size: 1.25rem;   
+    }
+  }
 `
 
 export const Links = styled.div`
@@ -142,8 +196,6 @@ export const Links = styled.div`
 
   button {
     width: fit-content; 
-    height: fit-content;
-    padding: .25rem 1rem;
     outline: none; 
     border: none; 
 
@@ -152,7 +204,6 @@ export const Links = styled.div`
     border: 3px solid ${props => props.theme.main_bg};
 
     transition: all .3s; 
-
 
     &:hover {
       background: ${props => props.theme.main_bg};
@@ -168,12 +219,17 @@ export const Links = styled.div`
   }
 
   a {
+    display: block;
     color: ${props => props.theme.main_bg}; 
+    padding: .25rem 1rem;
     
     font-size: 1.25rem; 
     text-decoration: none; 
-    width: 100%;
-    heigth: 100%; 
+  }
 
+  @media (max-width: 500px) {
+    button {
+      padding: .2rem .75rem;
+    }
   }
 `

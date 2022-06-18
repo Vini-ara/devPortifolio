@@ -32,4 +32,26 @@ export const Wrapper = styled.section`
       } 
     }
   }
+
+  @media (max-width: 1024px) {
+    padding: 3rem 5rem;
+  }
+
+  @media (max-width: 500px) {
+    padding: 2.5rem;
+
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    p {
+      font-size: 1.25rem;
+    }
+
+    div {
+      span {
+        font-size: 1.25rem;
+      }
+    }
+  }
 `
