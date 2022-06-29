@@ -11,6 +11,7 @@ import pokedexImg from '../../../assets/listScreenshot.jpg';
 import matosecoImg from '../../../assets/mato-seco.jpg';
 import escreveresquecerImg from  '../../../assets/escreveresqucer.jpg';
 import iptrackerImg from '../../../assets/ip-tracker.jpg';
+import devFinances from '../../../assets/devFinances.jpeg';
 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -21,7 +22,7 @@ export const Projects: React.FC = () => {
   const project2 = useRef<HTMLDivElement>(null);
   const project3 = useRef<HTMLDivElement>(null);
   const project4 = useRef<HTMLDivElement>(null);
-
+  const project5 = useRef<HTMLDivElement>(null);
                                                                                                                                                     
   gsap.registerPlugin(ScrollTrigger)
 
@@ -30,7 +31,8 @@ export const Projects: React.FC = () => {
       project1.current,
       project2.current,
       project3.current,
-      project4.current
+      project4.current,
+      project5.current
     ]
       
     projects.forEach(project => {
@@ -182,6 +184,38 @@ export const Projects: React.FC = () => {
             <img src={matosecoImg} alt='mato seco website' />
           </WindowImgContainer>
         </WindowCard>
+      </Content>
+
+      <Content ref={project5}>
+        <WindowCard>
+          <WindowCardHeader>
+            <div className='windowController'>
+              <div></div>
+              <div className='yellow'></div>
+              <div className='green'></div>
+            </div>
+            <p>~/devFinances</p>  
+          </WindowCardHeader>
+
+          <WindowImgContainer style={{overflow: 'hidden'}}>
+            <img src={devFinances} alt='dev finances website' />
+          </WindowImgContainer>
+        </WindowCard>
+
+        <Info>
+          <h3> Dev Finances </h3>
+
+          <p>This is a finances app to control all the expenses and incomes</p>
+
+          <Links> 
+            <button>
+              <a href="https://github.com/Vini-ara/Finances-Maratona-Discovery" target="blank">Code</a>
+            </button>
+            <button>
+              <a href="https://devfinancesrock.netlify.app/" target="blank">Site</a>
+            </button>
+          </Links>
+        </Info>
       </Content>
     </Wrapper>
 )}
